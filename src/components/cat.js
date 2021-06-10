@@ -1,11 +1,59 @@
+import React, { useState } from "react";
+import styled from "styled-components";
+
 const Cat = ({item,index,addToBasket}) => { 
     return(
-    <div>
-                    <h2 key={index}>name:{item.name} Age:{item.age} Price:{item.price}</h2>
-                    <img src={item.url} alt="cat" width="100px" height="100px"></img>
-                    <button onClick={() => addToBasket(item)}>add to basket</button>   
-    </div> 
+    <StyledContainer>
+                   
+            <img src={item.url} alt="cat" width="100px" height="100px"></img>
+            <StyledInfo>
+                <StyledP>name:{item.name} </StyledP>
+                <StyledP>Age:{item.age}</StyledP>
+                <StyledP>Price:{item.price}</StyledP>
+                
+            </StyledInfo>
+            <StyledButton key={index} onClick={() => addToBasket(item)}>Add To Basket</StyledButton> 
+                      
+    </StyledContainer> 
     ) 
-}
+};
 
+const StyledContainer = styled.div`
+    
+    
+    display: flex;    
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-around;    
+    width: 400px;
+
+`;
+
+const StyledInfo = styled.div`
+    color: darkpink;  
+    margin-left: 10px;
+    
+`;
+
+const StyledP = styled.p`
+    margin-bottom: 5px;
+`
+
+const StyledButton = styled.button`
+    height: 30px;
+    margin-left: 10px;
+    vertical-align:middle ;
+  background-color: pink;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  &:hover {
+    background-color: #ff9faf;
+    cursor: pointer;
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+`;
+   
 export default Cat;

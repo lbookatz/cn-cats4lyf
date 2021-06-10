@@ -3,6 +3,7 @@ import './App.css';
 import faker from "faker";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cat from "./components/cat"
+import styled from "styled-components";
 
  
 function App() {
@@ -33,21 +34,32 @@ function App() {
   }
 
 return(
-  <div>
-   
-    
+  <StyledWrapper>
     <h1>Cats 4 lyf</h1>
     <p>We are the number 1 shop for cats.</p>
     
-
+    
     {cats.map((item, index) => {
             return  (
                 <Cat item={item} index={index} addToBasket={addToBasket}/>                    
                 )
             })
        }
-  </div>
+  </StyledWrapper>
+       
 )
 }
+
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  back
+  background-image: url("images/backgroundCats.webp");
+  background-repeat: repeat;
+  // background-color: aqua;
+`;
+
 
 export default App;
