@@ -21,7 +21,7 @@ function App() {
         const cat = data[i];
         cat["name"] = faker.name.firstName()        
         cat["age"] = faker.datatype.number(12)
-        cat["Price"] = faker.commerce.price(50,100)
+        cat["price"] = faker.commerce.price(50,100)
       }
       setCats(data)
   }
@@ -29,24 +29,22 @@ function App() {
   const addToBasket = (item) => {
     console.log(basket)
     setBasket([...basket,item])
-  
-    console.log(basket)
   }
 
 return(
   <div>
    
-    <>
-      <h1>Cats 4 lyf</h1>
-    </>
+    
+    <h1>Cats 4 lyf</h1>
+    <p>We are the number 1 shop for cats.</p>
+    
 
     {cats.map((item, index) => {
             return  (
                 <>
-                    <h1 key={index}>name:{item.name} Age:{item.age}</h1>
+                    <h2 key={index}>name:{item.name} Age:{item.age} Price:{item.price}</h2>
                     <img src={item.url} alt="cat" width="100px" height="100px"></img>
-                    <button onClick={() => addToBasket(item)}>add to basket</button>
-                    <button onClick={() => logger()}>add to basket</button>
+                    <button onClick={() => addToBasket(item)}>add to basket</button>                    
                 </>
             )
             })
