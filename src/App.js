@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './App.css';
 import faker from "faker";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cat from "./components/cat"
 
  
 function App() {
@@ -26,9 +27,9 @@ function App() {
       setCats(data)
   }
 
-  const addToBasket = (item) => {
-    console.log(basket)
+  const addToBasket = (item) => {    
     setBasket([...basket,item])
+    console.log(basket)
   }
 
 return(
@@ -41,12 +42,8 @@ return(
 
     {cats.map((item, index) => {
             return  (
-                <>
-                    <h2 key={index}>name:{item.name} Age:{item.age} Price:{item.price}</h2>
-                    <img src={item.url} alt="cat" width="100px" height="100px"></img>
-                    <button onClick={() => addToBasket(item)}>add to basket</button>                    
-                </>
-            )
+                <Cat item={item} index={index} addToBasket={addToBasket}/>                    
+                )
             })
        }
   </div>
