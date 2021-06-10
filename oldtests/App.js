@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import './App.css';
 import faker from "faker";
+import ModalCheackout from "./components/modal";
+import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
  
@@ -8,6 +10,8 @@ function App() {
 
   const [cats, setCats] = useState ([]); 
   const [basket, setBasket] = useState ([]); 
+
+  const [modalShow, setModalShow] = useState(false);
 
   useEffect(() => {
     getCats();
@@ -21,7 +25,6 @@ function App() {
         const cat = data[i];
         cat["name"] = faker.name.firstName()        
         cat["age"] = faker.datatype.number(12)
-        cat["Price"] = faker.commerce.price(50,100)
       }
       setCats(data)
   }
@@ -29,13 +32,27 @@ function App() {
   const addToBasket = (item) => {
     console.log(basket)
     setBasket([...basket,item])
-  
+    console.log(basket)
+  }
+
+  const logger = () => {
     console.log(basket)
   }
 
 return(
   <div>
-   
+
+      <Button variant="primary" onClick={() => setModalShow(true)}>
+        Launch vertically centered modal
+      </Button>
+
+      <ModalCheackout
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        bc={basket}
+      />
+    
+    
     <>
       <h1>Cats 4 lyf</h1>
     </>
