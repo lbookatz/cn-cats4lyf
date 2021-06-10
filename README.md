@@ -7,8 +7,8 @@ Please check out the trello to follow our progress.
 Roman Hyde (RomanHyde), Mina Khosravi (Minakrv) and Lance Bookatz (lbookatz)
 
 ## Branches:
-Main - main project build
-Calico - Roman's branch
+- Main - main project build
+- Calico - Roman's branch
 
 ## Trello Board: 
 https://trello.com/b/xesEzsMq/cats4lyf
