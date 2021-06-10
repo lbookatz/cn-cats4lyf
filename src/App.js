@@ -4,6 +4,7 @@ import faker from "faker";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cat from "./components/cat"
 import styled from "styled-components";
+import img from './images/backgroundCats.webp'
 
  
 function App() {
@@ -55,9 +56,11 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  back
-  background-image: url("images/backgroundCats.webp");
+  // background-image: url("images/backgroundCats.webp");
+  background-image: url(${img});
+  background-size: 200px 200px;
   background-repeat: repeat;
+  
   // background-color: aqua;
 `;
 

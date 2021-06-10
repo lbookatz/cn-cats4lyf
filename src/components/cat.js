@@ -7,9 +7,9 @@ const Cat = ({item,index,addToBasket}) => {
                    
             <img src={item.url} alt="cat" width="100px" height="100px"></img>
             <StyledInfo>
-                <StyledP>name:{item.name} </StyledP>
-                <StyledP>Age:{item.age}</StyledP>
-                <StyledP>Price:{item.price}</StyledP>
+                <StyledP>name: {item.name} </StyledP>
+                <StyledP>Age: {item.age}</StyledP>
+                <StyledP>Price: £{item.price}</StyledP>
                 
             </StyledInfo>
             <StyledButton key={index} onClick={() => addToBasket(item)}>Add To Basket</StyledButton> 
@@ -24,8 +24,10 @@ const StyledContainer = styled.div`
     display: flex;    
     flex-direction: row;
     margin-bottom: 20px;
+    padding:10px;
     justify-content: space-around;    
     width: 400px;
+    background-color: beige;
 
 `;
 
