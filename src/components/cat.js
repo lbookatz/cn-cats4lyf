@@ -19,8 +19,6 @@ const Cat = ({item,index,addToBasket}) => {
 };
 
 const StyledContainer = styled.div`
-    
-    
     display: flex;    
     flex-direction: row;
     margin-bottom: 20px;
@@ -28,6 +26,7 @@ const StyledContainer = styled.div`
     justify-content: space-around;    
     width: 400px;
     background-color: beige;
+    border-radius: 5px;
 
 `;
 
