@@ -1,17 +1,16 @@
 import React, {useState, useEffect} from 'react'
+import './App.css';
 import faker from "faker";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Cat from "./components/cat";
-import Cart from "./components/cart";
+import Cat from "./components/cat"
 import styled from "styled-components";
 import img from './images/backgroundCats.webp'
+
  
 function App() {
 
   const [cats, setCats] = useState ([]); 
   const [basket, setBasket] = useState ([]); 
-
-  const [totalPrice,setTotalPrice] = useState(0)
 
   useEffect(() => {
     getCats();
@@ -32,24 +31,18 @@ function App() {
 
   const addToBasket = (item) => {    
     setBasket([...basket,item])
-    setTotalPrice(parseInt(totalPrice)+parseInt(item.price))
-    console.log(totalPrice)
+    console.log(basket)
   }
 
 return(
   <StyledWrapper>
     <h1>Cats 4 lyf</h1>
-    <h3>We are the number 1 shop for cats.</h3>
+    <p>We are the number 1 shop for cats.</p>
     
     
-      <Cart basket={basket} totalPrice={totalPrice} />
-
-      
-    
-
     {cats.map((item, index) => {
             return  (
-                <Cat item={item} index={index} key={index} addToBasket={addToBasket}/>                                 
+                <Cat item={item} index={index} addToBasket={addToBasket}/>                    
                 )
             })
        }
