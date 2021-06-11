@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react'
-import './App.css';
 import faker from "faker";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cat from "./components/cat";
-
 import Cart from "./components/cart";
 import styled from "styled-components";
 import img from './images/backgroundCats.webp'

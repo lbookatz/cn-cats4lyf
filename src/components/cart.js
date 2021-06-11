@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import React, {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PopUpBasket from "./modalBasket"
 
@@ -8,8 +7,8 @@ const Cart = ({basket, totalPrice}) => {
     <StyledContainer>
          
             <StyledInfo>
-                <StyledP>Number of items in basket: {basket.length}</StyledP>
-                <StyledP>Total Price: £{totalPrice}</StyledP>
+                <StyledP><b>Number of items in basket:</b> {basket.length}</StyledP>
+                <StyledP><b>Total Price:</b> £{totalPrice}</StyledP>
                 <PopUpBasket basket={basket}/>   
                                 
             </StyledInfo>
@@ -37,23 +36,6 @@ const StyledInfo = styled.div`
 
 const StyledP = styled.p`
     margin-bottom: 5px;
-`
-
-const StyledButton = styled.button`
-    height: 30px;
-    margin-left: 10px;
-    vertical-align:middle ;
-  background-color: pink;
-  padding: 5px;
-  border-radius: 5px;
-  border: none;
-  &:hover {
-    background-color: #ff9faf;
-    cursor: pointer;
-  }
-  &:active {
-    transform: scale(0.95);
-  }
 `;
    
 export default Cart;

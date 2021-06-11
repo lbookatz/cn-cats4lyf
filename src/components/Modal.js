@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import App from '../App';
 
 
 function ModalWindow(props) {
@@ -48,7 +47,7 @@ function ModalWindow(props) {
   
     return (
       <>
-        <Button variant="primary" onClick={() => setModalShow(true)}>
+        <Button variant="info" size="sm" onClick={() => setModalShow(true)}>
           More Information
         </Button>
   
