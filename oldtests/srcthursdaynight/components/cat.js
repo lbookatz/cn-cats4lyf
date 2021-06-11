@@ -1,27 +1,19 @@
+import React, { useState } from "react";
 import styled from "styled-components";
-import React, {useState, useEffect} from 'react'
-import faker from "faker";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Modal } from 'react-bootstrap';
-import PopUp from './Modal';
 
 const Cat = ({item,index,addToBasket}) => { 
     return(
     <StyledContainer>
-         <Modal cat={item} />          
+                   
             <img src={item.url} alt="cat" width="100px" height="100px"></img>
             <StyledInfo>
-                    
                 <StyledP>name: {item.name} </StyledP>
                 <StyledP>Age: {item.age}</StyledP>
                 <StyledP>Price: £{item.price}</StyledP>
                 
             </StyledInfo>
-            <div>
-                <PopUp />   
-                <p> </p>
-                <Button key={index} onClick={() => addToBasket(item)}>Add To Basket</Button> 
-            </div>          
+            <StyledButton key={index} onClick={() => addToBasket(item)}>Add To Basket</StyledButton> 
+                      
     </StyledContainer> 
     ) 
 };
@@ -35,6 +27,7 @@ const StyledContainer = styled.div`
     width: 400px;
     background-color: beige;
     border-radius: 5px;
+
 `;
 
 const StyledInfo = styled.div`
