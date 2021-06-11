@@ -7,7 +7,6 @@ import Cat from "./components/cat";
 import Cart from "./components/cart";
 import styled from "styled-components";
 import img from './images/backgroundCats.webp'
-import PopUpBasket from "./components/modalBasket"
  
 function App() {
 
@@ -46,8 +45,8 @@ return(
     
     
       <Cart basket={basket} totalPrice={totalPrice} />
+
       
-      <PopUpBasket basket={basket}/>   
     
 
     {cats.map((item, index) => {

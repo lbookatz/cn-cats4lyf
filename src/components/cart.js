@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React, {useState, useEffect} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import PopUpBasket from "./modalBasket"
 
 const Cart = ({basket, totalPrice}) => { 
     return(
@@ -9,6 +10,7 @@ const Cart = ({basket, totalPrice}) => {
             <StyledInfo>
                 <StyledP>Number of items in basket: {basket.length}</StyledP>
                 <StyledP>Total Price: £{totalPrice}</StyledP>
+                <PopUpBasket basket={basket}/>   
                                 
             </StyledInfo>
          
