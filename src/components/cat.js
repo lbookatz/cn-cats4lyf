@@ -12,13 +12,13 @@ const Cat = ({item,index,addToBasket}) => {
             <img src={item.url} alt="cat" width="100px" height="100px"></img>
             <StyledInfo>
                     
-                <StyledP>name: {item.name} </StyledP>
+                <StyledP>Name: {item.name} </StyledP>
                 <StyledP>Age: {item.age}</StyledP>
                 <StyledP>Price: £{item.price}</StyledP>
                 
             </StyledInfo>
             <div>
-                <PopUp />   
+                <PopUp item={item}/>   
                 <p> </p>
                 <Button key={index} onClick={() => addToBasket(item)}>Add To Basket</Button> 
             </div>          

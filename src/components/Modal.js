@@ -18,12 +18,12 @@ function ModalWindow(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>{props.name}</h4>
-          <img alt="cat" />
+          <h4>{props.item.name}</h4>
+          <img src={props.item.url} alt="cat" width="200px" height="200px"/>
           <p>
-            <b>Age:</b> {props.age}
+            <b>Age:</b> {props.item.age}
             <br />
-            <b>Price:</b> {props.price}
+            <b>Price:</b> {props.item.price}
             <br />
             <b>Description:</b>
             <br />
@@ -43,7 +43,7 @@ function ModalWindow(props) {
   }
   
 
-  function PopUp() {
+  function PopUp({item}) {
     const [modalShow, setModalShow] = React.useState(false);
   
     return (
@@ -55,6 +55,7 @@ function ModalWindow(props) {
         <ModalWindow
           show={modalShow}
           onHide={() => setModalShow(false)}
+          item={item}
         />
       </>
     );
