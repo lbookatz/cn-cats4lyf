@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button, Modal } from 'react-bootstrap';
-import App from '../App';
 
 
 function ModalWindow(props) {
@@ -19,6 +18,7 @@ function ModalWindow(props) {
         </Modal.Header>
         <Modal.Body>
           <h4>{props.name}</h4>
+          <img alt="Cat" />
           <p>
             <b>Age:</b> {props.age}
             <br />
