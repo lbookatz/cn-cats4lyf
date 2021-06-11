@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import styled from "styled-components";
 
 
 const ModalCheackout = (props) => {
@@ -18,13 +19,18 @@ const ModalCheackout = (props) => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h4>Centered Modal</h4>
           <p>
           {props.basket.map((item, index) => {
             return  (
                 <>
-                    <h1 key={index}>name:{item.name} Age:{item.age}</h1>
-                    <img src={item.url} alt="cat" width="100px" height="100px"></img>
+                    <StyledContainer>
+                      <img src={item.url} alt="cat" width="100px" height="100px"></img>
+                      <StyledInfo>
+                        <p>Name: {item.name}</p> 
+                        <p>Age: {item.age}</p> 
+                        <p>Price: £{item.price}</p>
+                      </StyledInfo>
+                    </StyledContainer>
                 </>
             )
             })
@@ -58,6 +64,24 @@ const ModalCheackout = (props) => {
 
     )
   }
+
+  const StyledContainer = styled.div`
+    display: flex;    
+    flex-direction: row;
+    margin-bottom: 5px;
+    padding:5px;
+    /* justify-content: space-around;     */
+    /* width: 400px; */
+    background-color: beige;
+    border-radius: 5px;
+    height: 110px;
+`;
+
+const StyledInfo = styled.div`
+    color: darkpink;  
+    margin-left: 10px;
+    
+`;
 
 
 
