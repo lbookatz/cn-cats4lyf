@@ -41,11 +41,7 @@ return(
     <h1>Cats 4 lyf</h1>
     <h3>We are the number 1 shop for cats.</h3>
     
-    
       <Cart basket={basket} totalPrice={totalPrice} />
-
-      
-    
 
     {cats.map((item, index) => {
             return  (
