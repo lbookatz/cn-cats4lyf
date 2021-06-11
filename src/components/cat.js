@@ -18,7 +18,7 @@ const Cat = ({item,index,addToBasket}) => {
                 
             </StyledInfo>
             <div>
-                <PopUp />   
+                <PopUp item={item}/>   
                 <p> </p>
                 <Button key={index} onClick={() => addToBasket(item)}>Add To Basket</Button> 
             </div>          
