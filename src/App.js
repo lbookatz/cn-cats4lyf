@@ -45,9 +45,9 @@ function App() {
 
   const minusBasket = (item) => {
 
-    basket.map(e => e.name === item.name && e.ammountInBasket > 0? e.ammountInBasket = e.ammountInBasket - 1 : e)
+    basket.map(e => e.name === item.name && e.ammountInBasket > 0? (e.ammountInBasket = e.ammountInBasket - 1, setTotalPrice(parseInt(totalPrice)-parseInt(item.price))): e)
     setBasket([...basket])
-    setTotalPrice(parseInt(totalPrice)-parseInt(item.price))
+    
   }
 
 return(
