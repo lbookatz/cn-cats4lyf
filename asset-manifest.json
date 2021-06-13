@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/cn-cats4lyf/static/css/main.bcbc6817.chunk.css",
+    "main.js": "/cn-cats4lyf/static/js/main.d62fb0e2.chunk.js",
+    "main.js.map": "/cn-cats4lyf/static/js/main.d62fb0e2.chunk.js.map",
+    "runtime-main.js": "/cn-cats4lyf/static/js/runtime-main.8a65ae7c.js",
+    "runtime-main.js.map": "/cn-cats4lyf/static/js/runtime-main.8a65ae7c.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/cn-cats4lyf/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.57e039f3.chunk.js": "/cn-cats4lyf/static/js/2.57e039f3.chunk.js",
+    "static/js/2.57e039f3.chunk.js.map": "/cn-cats4lyf/static/js/2.57e039f3.chunk.js.map",
+    "index.html": "/cn-cats4lyf/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/cn-cats4lyf/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.bcbc6817.chunk.css.map": "/cn-cats4lyf/static/css/main.bcbc6817.chunk.css.map",
+    "static/js/2.57e039f3.chunk.js.LICENSE.txt": "/cn-cats4lyf/static/js/2.57e039f3.chunk.js.LICENSE.txt",
+    "static/media/backgroundCats.2127f144.webp": "/cn-cats4lyf/static/media/backgroundCats.2127f144.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a65ae7c.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.57e039f3.chunk.js",
+    "static/css/main.bcbc6817.chunk.css",
+    "static/js/main.d62fb0e2.chunk.js"
+  ]
+}
